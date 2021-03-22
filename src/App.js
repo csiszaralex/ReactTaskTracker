@@ -5,26 +5,7 @@ import AddTask from "./components/AddTask.jsx";
 
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: "Asd",
-      day: "ma",
-      reminder: true,
-    },
-    {
-      id: 2,
-      text: "Mááás",
-      day: "holnap",
-      reminder: true,
-    },
-    {
-      id: 3,
-      text: "xDD",
-      day: "jövőre",
-      reminder: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));

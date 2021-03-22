@@ -3,9 +3,6 @@ import Header from "./components/Header.jsx";
 import Tasks from "./components/Tasks.jsx";
 
 const App = () => {
-  const name = "Alex";
-  const felk = true;
-
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -34,11 +31,7 @@ const App = () => {
   return (
     <div className="container">
       <Header title="Hello React!" />
-      <h2>
-        Hello {name}
-        {felk ? "!" : ""}
-      </h2>
-      <Tasks tasks={tasks} onDelete={deleteTask} />
+      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} /> : "No Tasks To Show"}
     </div>
   );
 };

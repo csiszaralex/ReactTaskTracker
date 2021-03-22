@@ -27,6 +27,10 @@ const App = () => {
     },
   ]);
 
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+
   return (
     <div className="container">
       <Header title="Hello React!" />
@@ -34,7 +38,7 @@ const App = () => {
         Hello {name}
         {felk ? "!" : ""}
       </h2>
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} onDelete={deleteTask} />
     </div>
   );
 };
